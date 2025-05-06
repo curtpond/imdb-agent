@@ -82,15 +82,35 @@ imdb-agent/
 - [x] Snowflake integration and setup
 - [x] Vector similarity search implementation
 - [x] Basic agent functionality
-- [ ] Complete embeddings generation
+- [x] OpenAI embeddings integration
+- [x] Cosine similarity implementation
 - [ ] Streamlit UI implementation
 - [ ] Production deployment
 
+### Recent Progress (May 5, 2025)
+
+1. Successfully implemented embeddings generation using OpenAI's API
+2. Created a robust data model in Snowflake with:
+   - ARRAY type for storing embeddings
+   - Efficient movie metadata storage
+   - Unique constraints and primary keys
+3. Developed Python pipeline for:
+   - Generating embeddings from movie descriptions
+   - Storing embeddings in Snowflake
+   - Updating movies automatically
+4. Implemented cosine similarity search with:
+   - Custom SQL view for similarity calculations
+   - Efficient vector operations using FLATTEN
+   - Accurate semantic matching (0.82 similarity between Matrix and Inception)
+
 ## Next Steps
 
-1. Complete the embeddings generation in Snowflake
-2. Implement the Streamlit UI
-3. Add more sophisticated recommendation algorithms
+1. Add more test movies to validate similarity search
+2. Implement the Streamlit UI for:
+   - Movie search interface
+   - Similarity results display
+   - Movie details view
+3. Add more movie metadata (genres, actors) to enhance recommendations
 4. Enhance the conversational capabilities
 5. Add user feedback and learning mechanisms
 
